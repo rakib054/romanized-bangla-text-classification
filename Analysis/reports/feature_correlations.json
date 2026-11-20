@@ -1,0 +1,168 @@
+{
+  "spearman_correlation_matrix": {
+    "char_count": {
+      "char_count": 1.0,
+      "word_count": 0.9801,
+      "unique_word_count": 0.978,
+      "avg_word_length": 0.0757,
+      "ttr": -0.6183,
+      "punctuation_count": 0.739,
+      "digit_count": 0.3436,
+      "uppercase_count": 0.6043,
+      "whitespace_count": 0.9801
+    },
+    "word_count": {
+      "char_count": 0.9801,
+      "word_count": 1.0,
+      "unique_word_count": 0.9944,
+      "avg_word_length": -0.0959,
+      "ttr": -0.6508,
+      "punctuation_count": 0.7212,
+      "digit_count": 0.3422,
+      "uppercase_count": 0.5923,
+      "whitespace_count": 1.0
+    },
+    "unique_word_count": {
+      "char_count": 0.978,
+      "word_count": 0.9944,
+      "unique_word_count": 1.0,
+      "avg_word_length": -0.082,
+      "ttr": -0.5819,
+      "punctuation_count": 0.7214,
+      "digit_count": 0.34,
+      "uppercase_count": 0.6003,
+      "whitespace_count": 0.9944
+    },
+    "avg_word_length": {
+      "char_count": 0.0757,
+      "word_count": -0.0959,
+      "unique_word_count": -0.082,
+      "avg_word_length": 1.0,
+      "ttr": 0.1618,
+      "punctuation_count": 0.0738,
+      "digit_count": -0.0162,
+      "uppercase_count": 0.0507,
+      "whitespace_count": -0.0959
+    },
+    "ttr": {
+      "char_count": -0.6183,
+      "word_count": -0.6508,
+      "unique_word_count": -0.5819,
+      "avg_word_length": 0.1618,
+      "ttr": 1.0,
+      "punctuation_count": -0.4606,
+      "digit_count": -0.3124,
+      "uppercase_count": -0.3454,
+      "whitespace_count": -0.6508
+    },
+    "punctuation_count": {
+      "char_count": 0.739,
+      "word_count": 0.7212,
+      "unique_word_count": 0.7214,
+      "avg_word_length": 0.0738,
+      "ttr": -0.4606,
+      "punctuation_count": 1.0,
+      "digit_count": 0.3715,
+      "uppercase_count": 0.6578,
+      "whitespace_count": 0.7212
+    },
+    "digit_count": {
+      "char_count": 0.3436,
+      "word_count": 0.3422,
+      "unique_word_count": 0.34,
+      "avg_word_length": -0.0162,
+      "ttr": -0.3124,
+      "punctuation_count": 0.3715,
+      "digit_count": 1.0,
+      "uppercase_count": 0.3845,
+      "whitespace_count": 0.3422
+    },
+    "uppercase_count": {
+      "char_count": 0.6043,
+      "word_count": 0.5923,
+      "unique_word_count": 0.6003,
+      "avg_word_length": 0.0507,
+      "ttr": -0.3454,
+      "punctuation_count": 0.6578,
+      "digit_count": 0.3845,
+      "uppercase_count": 1.0,
+      "whitespace_count": 0.5923
+    },
+    "whitespace_count": {
+      "char_count": 0.9801,
+      "word_count": 1.0,
+      "unique_word_count": 0.9944,
+      "avg_word_length": -0.0959,
+      "ttr": -0.6508,
+      "punctuation_count": 0.7212,
+      "digit_count": 0.3422,
+      "uppercase_count": 0.5923,
+      "whitespace_count": 1.0
+    }
+  },
+  "class_association_tests": {
+    "char_count": {
+      "anova_f_stat": 230.5761,
+      "anova_p_val": 1.2724291897453645e-143,
+      "kruskal_h_stat": 379.722,
+      "kruskal_p_val": 5.460403093285744e-82,
+      "statistically_significant_at_001": true
+    },
+    "word_count": {
+      "anova_f_stat": 227.5309,
+      "anova_p_val": 8.555628607472938e-142,
+      "kruskal_h_stat": 342.4719,
+      "kruskal_p_val": 6.363426186066712e-74,
+      "statistically_significant_at_001": true
+    },
+    "unique_word_count": {
+      "anova_f_stat": 230.193,
+      "anova_p_val": 2.160015742811251e-143,
+      "kruskal_h_stat": 355.0702,
+      "kruskal_p_val": 1.1907244151142571e-76,
+      "statistically_significant_at_001": true
+    },
+    "avg_word_length": {
+      "anova_f_stat": 33.4787,
+      "anova_p_val": 1.6893517640858803e-21,
+      "kruskal_h_stat": 167.1778,
+      "kruskal_p_val": 5.174864271659083e-36,
+      "statistically_significant_at_001": true
+    },
+    "ttr": {
+      "anova_f_stat": 121.9018,
+      "anova_p_val": 3.0552858539538412e-77,
+      "kruskal_h_stat": 375.089,
+      "kruskal_p_val": 5.503329365133389e-81,
+      "statistically_significant_at_001": true
+    },
+    "punctuation_count": {
+      "anova_f_stat": 79.752,
+      "anova_p_val": 7.542606377376422e-51,
+      "kruskal_h_stat": 150.5336,
+      "kruskal_p_val": 2.0213921188382186e-32,
+      "statistically_significant_at_001": true
+    },
+    "digit_count": {
+      "anova_f_stat": 81.7401,
+      "anova_p_val": 4.213994903019708e-52,
+      "kruskal_h_stat": 401.6915,
+      "kruskal_p_val": 9.522805970834659e-87,
+      "statistically_significant_at_001": true
+    },
+    "uppercase_count": {
+      "anova_f_stat": 152.6219,
+      "anova_p_val": 2.9967502213324772e-96,
+      "kruskal_h_stat": 379.8155,
+      "kruskal_p_val": 5.2117578193632176e-82,
+      "statistically_significant_at_001": true
+    },
+    "whitespace_count": {
+      "anova_f_stat": 227.5309,
+      "anova_p_val": 8.555628607472938e-142,
+      "kruskal_h_stat": 342.4719,
+      "kruskal_p_val": 6.363426186066712e-74,
+      "statistically_significant_at_001": true
+    }
+  }
+}

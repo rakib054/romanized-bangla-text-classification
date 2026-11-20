@@ -1,0 +1,72 @@
+{
+  "files_exist": {
+    "train": true,
+    "test": true,
+    "sample_submission": true
+  },
+  "file_sizes_kb": {
+    "train": 1516.09,
+    "test": 386.85,
+    "sample_submission": 48.01
+  },
+  "schemas": {
+    "train": {
+      "rows": 8195,
+      "columns": [
+        "id",
+        "text",
+        "label"
+      ],
+      "dtypes": {
+        "id": "object",
+        "text": "object",
+        "label": "object"
+      },
+      "null_counts": {
+        "id": 0,
+        "text": 0,
+        "label": 0
+      },
+      "empty_strings": {
+        "id": 0,
+        "text": 0,
+        "label": 0
+      },
+      "unique_ids": 8195
+    },
+    "test": {
+      "rows": 2048,
+      "columns": [
+        "id",
+        "text"
+      ],
+      "dtypes": {
+        "id": "object",
+        "text": "object"
+      },
+      "null_counts": {
+        "id": 0,
+        "text": 0
+      },
+      "empty_strings": {
+        "id": 0,
+        "text": 0
+      },
+      "unique_ids": 2048
+    },
+    "sample_submission": {
+      "rows": 2048,
+      "columns": [
+        "id",
+        "label"
+      ],
+      "unique_ids": 2048
+    }
+  },
+  "integrity": {
+    "train_has_expected_labels_only": true,
+    "unknown_labels_found": [],
+    "test_and_sub_ids_identical_order": true,
+    "row_counts_match_spec": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "model_name": "microsoft/mdeberta-v3-base",
+  "model_tag": "mdeberta_v3_base",
+  "oof_macro_f1": 0.6481977686234481,
+  "oof_accuracy": 0.6619890176937157,
+  "fold_f1_scores": {
+    "fold_0": 0.6605183616297712,
+    "fold_1": 0.6423875735074698,
+    "fold_2": 0.6611865555982686,
+    "fold_3": 0.6291779057514036,
+    "fold_4": 0.6458159677694996
+  },
+  "fold_mean": 0.6478172728512825,
+  "fold_std": 0.012008065957568079,
+  "epochs": 4,
+  "max_len": 192,
+  "learning_rate": 1.5e-05
+}

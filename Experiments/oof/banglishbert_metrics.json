@@ -1,0 +1,18 @@
+{
+  "model_name": "csebuetnlp/banglishbert",
+  "model_tag": "banglishbert",
+  "oof_macro_f1": 0.6781449785149447,
+  "oof_accuracy": 0.689810860280659,
+  "fold_f1_scores": {
+    "fold_0": 0.6911324121838052,
+    "fold_1": 0.6738195536724678,
+    "fold_2": 0.6850657291564655,
+    "fold_3": 0.6646837004583267,
+    "fold_4": 0.6747321838276095
+  },
+  "fold_mean": 0.6778867158597348,
+  "fold_std": 0.009249856207673561,
+  "epochs": 4,
+  "max_len": 192,
+  "learning_rate": 2e-05
+}

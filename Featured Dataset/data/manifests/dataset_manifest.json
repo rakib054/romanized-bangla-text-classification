@@ -1,0 +1,75 @@
+{
+  "project": "BhasaQuest-1",
+  "timestamp": "2026-11-12T03:29:02.491072",
+  "input_directory": "C:\\Users\\User\\MR.RAKIB\\DL Competition\\04 (Basha Quest 1)\\Datasets",
+  "output_directory": "C:\\Users\\User\\MR.RAKIB\\DL Competition\\04 (Basha Quest 1)\\Featured Dataset",
+  "summary": {
+    "train_rows": 8195,
+    "test_rows": 2048,
+    "representations": [
+      "text_raw",
+      "text_lower",
+      "text_conservative_clean",
+      "text_normalized"
+    ],
+    "numerical_features_count": 17,
+    "word_tfidf_vocab_size": 15000,
+    "char_tfidf_vocab_size": 35000,
+    "combined_feature_dim": 50000
+  },
+  "config_applied": {
+    "dataset": {
+      "raw_dir": "Datasets",
+      "train_file": "train.csv",
+      "test_file": "test.csv",
+      "sample_sub_file": "sample_submission.csv",
+      "text_col": "text",
+      "id_col": "id",
+      "label_col": "label"
+    },
+    "text_cleaning": {
+      "unicode_normalization": "NFKD",
+      "lowercase": true,
+      "strip_urls": false,
+      "normalize_repeated_chars": true,
+      "repeated_char_threshold": 2,
+      "preserve_hyphenated_suffixes": true,
+      "normalize_whitespace": true
+    },
+    "numerical_features": {
+      "enabled": true,
+      "compute_ratios": true,
+      "flag_special_patterns": true
+    },
+    "word_tfidf": {
+      "enabled": true,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "max_features": 15000,
+      "min_df": 2,
+      "max_df": 0.85,
+      "sublinear_tf": true,
+      "token_pattern": "(?u)\\b[a-zA-Z]+(?:-[a-zA-Z]+)?\\b"
+    },
+    "char_tfidf": {
+      "enabled": true,
+      "analyzer": "char_wb",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "max_features": 35000,
+      "min_df": 3,
+      "sublinear_tf": true
+    },
+    "export": {
+      "output_dir": "Featured Dataset",
+      "save_processed_text": true,
+      "save_numerical_features": true,
+      "save_sparse_matrices": true,
+      "save_combined_features": true
+    }
+  }
+}

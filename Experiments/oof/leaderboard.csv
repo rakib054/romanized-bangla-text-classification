@@ -1,0 +1,11 @@
+model_name,oof_macro_f1,oof_acc,fold0_f1,fold1_f1,fold2_f1,fold3_f1,fold4_f1,fold_std,notes
+calibrated_linearsvc_champion,0.7236,0.738,0.7332,0.7218,0.7133,0.727,0.711,0.0083,"LinearSVC Word(1,3)+Char(2,5), C=0.25, Balanced"
+muril_base_cased_pilot,0.5579,0.6093,0.5621,0.551,0.5594,0.5612,0.5558,0.0042,"Google MuRIL base, 4 epochs, lr 2e-5, max_len 128"
+ensemble_linearsvc_muril_v2,0.7251,0.7405,,,,,,,77% Calibrated LinearSVC + 23% MuRIL Base
+xlm_roberta_large,0.6696,0.6824,0.6842,0.6792,0.6722,0.6526,0.6595,0.0119,"FacebookAI/xlm-roberta-large, fixed 4ep, max_len 192, lr 1.2e-5"
+tri_ensemble_svm_xlm_muril,0.7269,0.7407,,,,,,,65% Calibrated LinearSVC + 20% XLM-R-Large + 15% MuRIL (25-fold Repeated CV 0.7269 | Kaggle Public LB: 0.73041)
+mdeberta_v3_base,0.6482,0.6620,0.6605,0.6424,0.6612,0.6292,0.6458,0.0120,"microsoft/mdeberta-v3-base, fixed 4ep, max_len 192, lr 1.5e-5"
+quad_ensemble_svm_xlm_muril_mdeb,0.7283,0.7423,,,,,,,68% Calibrated LinearSVC + 15.5% XLM-R + 15.5% MuRIL + 1.0% mDeBERTa (25-fold Repeated CV 0.7283 | Kaggle Public LB: 0.72911)
+banglishbert_5fold,0.6781,0.6898,0.6911,0.6738,0.6851,0.6647,0.6747,0.0092,"csebuetnlp/banglishbert, fixed 4ep, max_len 192, lr 2e-5 (Top Single Transformer)"
+tri_ensemble_svm_bbert_xlm,0.7299,0.7428,,,,,,,70% LinearSVC + 18% BanglishBERT + 12% XLM-R (25-fold Repeated CV 0.7298)
+quad_ensemble_svm_bbert_xlm_muril,0.7300,0.7428,,,,,,,66% LinearSVC + 16% BanglishBERT + 10% XLM-R + 8% MuRIL (25-fold Repeated CV 0.7300)

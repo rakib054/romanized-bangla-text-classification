@@ -1,0 +1,14 @@
+# Competition internal agent & master tracking files (as requested)
+AGENTS.md
+README.md
+!SUBMISSION_REPORT/README.md
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Temporary and checkpoint data
+Experiments/checkpoints*/
+Experiments/logs/

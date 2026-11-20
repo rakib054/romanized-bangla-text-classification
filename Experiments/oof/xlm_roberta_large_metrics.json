@@ -1,0 +1,18 @@
+{
+  "model_name": "FacebookAI/xlm-roberta-large",
+  "model_tag": "xlm_roberta_large",
+  "oof_macro_f1": 0.6695963965912424,
+  "oof_accuracy": 0.6823672971323979,
+  "fold_f1_scores": {
+    "fold_0": 0.684204419315892,
+    "fold_1": 0.6791680222825938,
+    "fold_2": 0.6722372680592141,
+    "fold_3": 0.6525555611468924,
+    "fold_4": 0.6594937812016001
+  },
+  "fold_mean": 0.6695318104012384,
+  "fold_std": 0.011869427971745922,
+  "epochs": 4,
+  "max_len": 192,
+  "learning_rate": 1.2e-05
+}

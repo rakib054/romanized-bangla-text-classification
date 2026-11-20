@@ -1,0 +1,84 @@
+{
+  "exact_duplicates": {
+    "train": 0,
+    "test": 0,
+    "train_test_overlap": 0
+  },
+  "normalized_duplicates": {
+    "train": 0,
+    "test": 0,
+    "train_test_overlap": 1
+  },
+  "normalized_overlap_cases": [
+    {
+      "normalized_text": "ami onno lokeder goponiyota akromon korte chai na amar kono achoron erano uchit",
+      "train_id": "7e191ffdcfb629bf",
+      "train_label": "72A2C8",
+      "train_raw_text": "Ami onno lokeder goponiyota akromon korte chai na, amar kono achoron erano uchit.",
+      "test_id": "a6ee9bb7872d6566",
+      "test_raw_text": "Ami onno lokeder goponiyota akromon korte chai na, amar kono achoron erano uchit?"
+    }
+  ],
+  "frequent_prefix_templates": [
+    {
+      "prefix": "ponyoti protyashamato kaj korche",
+      "count": 240
+    },
+    {
+      "prefix": "ponyoti byabohar kore ekti",
+      "count": 216
+    },
+    {
+      "prefix": "amar order niye abhijog",
+      "count": 148
+    },
+    {
+      "prefix": "ei khabar ba paniyotir",
+      "count": 118
+    },
+    {
+      "prefix": "amar order niye obhijog",
+      "count": 98
+    },
+    {
+      "prefix": "ponyoti hate paoyar por",
+      "count": 74
+    },
+    {
+      "prefix": "ami je ponnoti peyechi",
+      "count": 74
+    },
+    {
+      "prefix": "byabohar korar por twoke",
+      "count": 48
+    },
+    {
+      "prefix": "apni ki mone koren",
+      "count": 36
+    },
+    {
+      "prefix": "dainik prothom alor jonno",
+      "count": 28
+    },
+    {
+      "prefix": "ponyotir bahyik man prottashamato",
+      "count": 22
+    },
+    {
+      "prefix": "amar orderer packet niye",
+      "count": 18
+    },
+    {
+      "prefix": "ponyotir upadan byabohare aswasthi",
+      "count": 17
+    },
+    {
+      "prefix": "ponyotir upadan byabohare aswashti",
+      "count": 15
+    },
+    {
+      "prefix": "peket ba pekejing niye",
+      "count": 15
+    }
+  ]
+}

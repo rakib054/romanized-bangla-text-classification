@@ -1,0 +1,112 @@
+{
+  "project": "BhasaQuest-1",
+  "registry_version": "1.0.0",
+  "description": "Comprehensive feature catalog for Romanized Bangla multi-class classification",
+  "feature_families": {
+    "text_raw": {
+      "name": "text_raw",
+      "description": "Unaltered raw competition text preserving original casing, punctuation, symbols, and spelling",
+      "source_columns": ["text"],
+      "transformation_logic": "Pass-through without modification",
+      "output_type": "string",
+      "representation": "dense",
+      "requires_fitted_transformer": false,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Empty string fallback if null",
+      "leakage_risk": "None",
+      "intended_use_cases": ["Pretrained transformer fine-tuning (MuRIL, XLM-RoBERTa, mDeBERTa-v3), regex inspection"]
+    },
+    "text_lower": {
+      "name": "text_lower",
+      "description": "Case-folded text representation to collapse trivial casing distinctions",
+      "source_columns": ["text"],
+      "transformation_logic": "text.lower()",
+      "output_type": "string",
+      "representation": "dense",
+      "requires_fitted_transformer": false,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Empty string fallback if null",
+      "leakage_risk": "None",
+      "intended_use_cases": ["Uncased tokenizers, vocabulary building, baseline unigram modeling"]
+    },
+    "text_normalized": {
+      "name": "text_normalized",
+      "description": "Phonetically and orthographically stabilized text normalizing repeated expressive characters and unicode while preserving hyphens",
+      "source_columns": ["text"],
+      "transformation_logic": "Unicode NFKD normalization -> collapse repeated chars (threshold=2) -> normalize whitespace -> preserve hyphenated suffixes",
+      "output_type": "string",
+      "representation": "dense",
+      "requires_fitted_transformer": false,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Empty string fallback if null",
+      "leakage_risk": "None",
+      "intended_use_cases": ["Word TF-IDF, character TF-IDF, dictionary matching, sequence embeddings"]
+    },
+    "text_conservative_clean": {
+      "name": "text_conservative_clean",
+      "description": "Minimal cleaning removing extreme whitespace noise while retaining all punctuation and code-switching markers",
+      "source_columns": ["text"],
+      "transformation_logic": "Strip leading/trailing whitespace, collapse multiple spaces into single space",
+      "output_type": "string",
+      "representation": "dense",
+      "requires_fitted_transformer": false,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Empty string fallback if null",
+      "leakage_risk": "None",
+      "intended_use_cases": ["Subword tokenizers sensitive to exact punctuation and casing cues"]
+    },
+    "numerical_meta_features": {
+      "name": "numerical_meta_features",
+      "description": "14 text-derived structural and linguistic metrics measuring length, density, punctuation, casing, and expressive characters",
+      "source_columns": ["text"],
+      "transformation_logic": "Deterministic count and ratio calculations across character, word, uppercase, punctuation, digit, and flag categories",
+      "output_type": "float32 / int32",
+      "representation": "dense",
+      "requires_fitted_transformer": false,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Zero imputation for counts and ratios",
+      "leakage_risk": "None (computed per-sample independently)",
+      "intended_use_cases": ["Gradient boosted trees (LightGBM/XGBoost/CatBoost), hybrid stacking with sparse text representations"]
+    },
+    "word_tfidf": {
+      "name": "word_tfidf",
+      "description": "Word n-gram (1-2) Term Frequency - Inverse Document Frequency sparse representations with sublinear scaling",
+      "source_columns": ["text_normalized"],
+      "transformation_logic": "Scikit-Learn TfidfVectorizer (token_pattern preserving hyphens, sublinear_tf=True, min_df=2, max_df=0.85, max_features=15000)",
+      "output_type": "scipy.sparse.csr_matrix (float64)",
+      "representation": "sparse",
+      "requires_fitted_transformer": true,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Treated as empty document",
+      "leakage_risk": "Moderate if fitted globally across validation folds. Must be fit strictly on training folds during CV.",
+      "intended_use_cases": ["Linear classifiers (LogisticRegression, LinearSVC, SGDClassifier), Naive Bayes, RidgeClassifier"]
+    },
+    "char_tfidf": {
+      "name": "char_tfidf",
+      "description": "Word-boundary character n-gram (3-5) TF-IDF capturing phonetic variations, root stems, and inflections in Romanized Bangla",
+      "source_columns": ["text_normalized"],
+      "transformation_logic": "Scikit-Learn TfidfVectorizer (analyzer='char_wb', ngram_range=(3,5), min_df=3, sublinear_tf=True, max_features=35000)",
+      "output_type": "scipy.sparse.csr_matrix (float64)",
+      "representation": "sparse",
+      "requires_fitted_transformer": true,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Treated as empty document",
+      "leakage_risk": "Moderate if fitted globally. Must be fit strictly inside training folds during cross-validation.",
+      "intended_use_cases": ["Primary defense against the 34.8% test word OOV rate; essential for linear and neural baseline models"]
+    },
+    "combined_word_char_tfidf": {
+      "name": "combined_word_char_tfidf",
+      "description": "Horizontally concatenated word and char_wb TF-IDF sparse matrix",
+      "source_columns": ["word_tfidf", "char_tfidf"],
+      "transformation_logic": "scipy.sparse.hstack([word_tfidf, char_tfidf], format='csr')",
+      "output_type": "scipy.sparse.csr_matrix (float64)",
+      "representation": "sparse",
+      "requires_fitted_transformer": true,
+      "depends_on_labels": false,
+      "missing_value_behavior": "Inherits from component vectorizers",
+      "leakage_risk": "Must be constructed using fold-fitted transformers during CV.",
+      "intended_use_cases": ["High-performance classical linear baselines and ensemble probability generation"]
+    }
+  }
+}
+

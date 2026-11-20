@@ -1,0 +1,40 @@
+[2026-11-12 03:30:14] [INFO] ============================================================
+[2026-11-12 03:30:14] [INFO] STARTING BHASAQUEST-1 BASELINE CV & SUBMISSION PIPELINE
+[2026-11-12 03:30:14] [INFO] ============================================================
+[2026-11-12 03:30:14] [INFO] Created reference template: sample_submission_template.csv
+[2026-11-12 03:30:14] [INFO] Running 5-Fold Stratified Cross-Validation (Seed=42)...
+[2026-11-12 03:30:22] [INFO] Fold 1/5 Macro F1: 0.7201
+[2026-11-12 03:30:29] [INFO] Fold 2/5 Macro F1: 0.7193
+[2026-11-12 03:30:38] [INFO] Fold 3/5 Macro F1: 0.7063
+[2026-11-12 03:30:45] [INFO] Fold 4/5 Macro F1: 0.7140
+[2026-11-12 03:30:53] [INFO] Fold 5/5 Macro F1: 0.7055
+[2026-11-12 03:30:53] [INFO] ========================================
+[2026-11-12 03:30:53] [INFO] OVERALL OUT-OF-FOLD MACRO F1: 0.7130
+[2026-11-12 03:30:53] [INFO] OVERALL OUT-OF-FOLD ACCURACY: 0.7257
+[2026-11-12 03:30:53] [INFO] ========================================
+[2026-11-12 03:30:53] [INFO] Saved OOF probability matrix: C:\Users\User\MR.RAKIB\DL Competition\04 (Basha Quest 1)\Submission\models\oof_baseline_probs.npy
+[2026-11-12 03:30:53] [INFO] Fitting final production model on 100% labeled training dataset...
+[2026-11-12 03:31:03] [INFO] Saved submission files: submission_tfidf_baseline.csv, submission_final.csv
+[2026-11-12 03:31:03] [INFO] Auditing submission compliance: submission_final.csv
+[2026-11-12 03:31:03] [INFO] Submission audit PASSED: 2048 rows, correct columns, exact test sequence, valid labels.
+[2026-11-12 03:31:30] [INFO] ============================================================
+[2026-11-12 03:31:30] [INFO] STARTING BHASAQUEST-1 BASELINE CV & SUBMISSION PIPELINE
+[2026-11-12 03:31:30] [INFO] ============================================================
+[2026-11-12 03:31:30] [INFO] Created reference template: sample_submission_template.csv
+[2026-11-12 03:31:30] [INFO] Running 5-Fold Stratified Cross-Validation (Seed=42)...
+[2026-11-12 03:31:38] [INFO] Fold 1/5 Macro F1: 0.7201
+[2026-11-12 03:31:44] [INFO] Fold 2/5 Macro F1: 0.7193
+[2026-11-12 03:31:51] [INFO] Fold 3/5 Macro F1: 0.7063
+[2026-11-12 03:31:59] [INFO] Fold 4/5 Macro F1: 0.7140
+[2026-11-12 03:32:06] [INFO] Fold 5/5 Macro F1: 0.7055
+[2026-11-12 03:32:06] [INFO] ========================================
+[2026-11-12 03:32:06] [INFO] OVERALL OUT-OF-FOLD MACRO F1: 0.7130
+[2026-11-12 03:32:06] [INFO] OVERALL OUT-OF-FOLD ACCURACY: 0.7257
+[2026-11-12 03:32:06] [INFO] ========================================
+[2026-11-12 03:32:06] [INFO] Saved OOF probability matrix: C:\Users\User\MR.RAKIB\DL Competition\04 (Basha Quest 1)\Submission\models\oof_baseline_probs.npy
+[2026-11-12 03:32:06] [INFO] Fitting final production model on 100% labeled training dataset...
+[2026-11-12 03:32:15] [INFO] Saved submission files: submission_tfidf_baseline.csv, submission_final.csv
+[2026-11-12 03:32:15] [INFO] Auditing submission compliance: submission_final.csv
+[2026-11-12 03:32:15] [INFO] Submission audit PASSED: 2048 rows, correct columns, exact test sequence, valid labels.
+[2026-11-12 03:32:15] [INFO] Saved evaluation report to: C:\Users\User\MR.RAKIB\DL Competition\04 (Basha Quest 1)\Submission\reports\cv_evaluation_report.json
+[2026-11-12 03:32:15] [INFO] Submission pipeline completed successfully.

@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-11-12T03:32:15.937653",
+  "model_name": "Hybrid TF-IDF (Word 1-2 + Char 3-5) + Balanced LogisticRegression",
+  "hyperparameters": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "n_splits": 5,
+    "seed": 42
+  },
+  "overall_oof_macro_f1": 0.713,
+  "overall_oof_accuracy": 0.7257,
+  "mean_fold_macro_f1": 0.713,
+  "std_fold_macro_f1": 0.0062,
+  "folds": [
+    {
+      "fold": 1,
+      "val_samples": 1639,
+      "macro_f1": 0.7201
+    },
+    {
+      "fold": 2,
+      "val_samples": 1639,
+      "macro_f1": 0.7193
+    },
+    {
+      "fold": 3,
+      "val_samples": 1639,
+      "macro_f1": 0.7063
+    },
+    {
+      "fold": 4,
+      "val_samples": 1639,
+      "macro_f1": 0.714
+    },
+    {
+      "fold": 5,
+      "val_samples": 1639,
+      "macro_f1": 0.7055
+    }
+  ],
+  "per_class_metrics": {
+    "14AC78": {
+      "precision": 0.95,
+      "recall": 0.8033,
+      "f1_score": 0.8705,
+      "support": 2791
+    },
+    "19E1A1": {
+      "precision": 0.6329,
+      "recall": 0.6961,
+      "f1_score": 0.663,
+      "support": 1994
+    },
+    "6C0197": {
+      "precision": 0.6215,
+      "recall": 0.7235,
+      "f1_score": 0.6686,
+      "support": 1255
+    },
+    "72A2C8": {
+      "precision": 0.646,
+      "recall": 0.6538,
+      "f1_score": 0.6499,
+      "support": 2155
+    }
+  },
+  "confusion_matrix": [
+    [
+      2242,
+      193,
+      167,
+      189
+    ],
+    [
+      37,
+      1388,
+      159,
+      410
+    ],
+    [
+      33,
+      141,
+      908,
+      173
+    ],
+    [
+      48,
+      471,
+      227,
+      1409
+    ]
+  ],
+  "classes": [
+    "14AC78",
+    "19E1A1",
+    "6C0197",
+    "72A2C8"
+  ],
+  "submission_audit": {
+    "columns_match": true,
+    "row_count_exact": true,
+    "no_null_values": true,
+    "no_empty_strings": true,
+    "ids_unique": true,
+    "ids_match_test_exact_sequence": true,
+    "valid_labels_only": true,
+    "unexpected_labels": [],
+    "all_classes_predicted": true,
+    "class_distribution": {
+      "19E1A1": 598,
+      "14AC78": 525,
+      "72A2C8": 511,
+      "6C0197": 414
+    },
+    "audit_passed": true
+  }
+}
