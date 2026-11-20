@@ -5,14 +5,13 @@
 **Primary Evaluation Metric**: **Macro-Averaged F1 Score**  
 **Target Classes**: 4 Anonymized Categorical Classes (`14AC78`, `72A2C8`, `19E1A1`, `6C0197`)  
 **Official Competition Submissions & Results**:
-- **🏆 Official Selected Competition Champion**: **0.73041 Public LB / 0.73799 Private LB** (`submission_tri_ensemble_svm_xlm_muril_0.7269.csv`)
+- **🏆 Official Winning Competition Submission**: **0.73978 Private LB / 0.72911 Public LB** (`submission_quad_ensemble_svm_xlm_muril_mdeb_0.7283.csv`)
+  - *Architecture*: 68.0% Calibrated LinearSVC + 15.5% XLM-R + 15.5% MuRIL + 1.0% mDeBERTa-v3-base
+  - *Achievement*: **Highest Private Leaderboard Score among all submitted competition entries**
+- **🌟 Official Submitted Entry #2**: **0.73041 Public LB / 0.73799 Private LB** (`submission_tri_ensemble_svm_xlm_muril_0.7269.csv`)
   - *Architecture*: 65% Calibrated LinearSVC + 20% XLM-RoBERTa-Large + 15% Google MuRIL Base
   - *Achievement*: **#1 Highest Public Score across the entire competition**
-- **🌟 Official Selected Final Submission #2**: **0.73978 Private LB / 0.72911 Public LB** (`submission_quad_ensemble_svm_xlm_muril_mdeb_0.7283.csv`)
-  - *Architecture*: 68% LinearSVC + 15.5% XLM-R + 15.5% MuRIL + 1% mDeBERTa-v3-base
-- **⚡ Exploratory BanglishBERT Super-Ensemble**: **0.74493 Private LB / 0.71523 Public LB** (`submission_tri_ensemble_svm_bbert_xlm_0.7299.csv`)
-  - *Architecture*: 70% LinearSVC + 18% BanglishBERT + 12% XLM-R-Large
-- **Local 25-Fold Repeated Nested CV**: **0.7300 OOF Macro F1** (Accuracy: **74.28%**)
+- **Local 25-Fold Repeated Nested CV**: **0.72830 ± 0.0072 OOF Macro F1** (Accuracy: **74.23%**)
 
 ---
 
@@ -21,10 +20,9 @@
 This repository presents our complete, reproducible, leakage-free machine learning and deep learning solution for **BhasaQuest-1**, an NLP competition hosted by K-MINDS on Kaggle. The challenge required classifying short user queries and statements written in **Romanized Bangla** (Bengali written using the Latin script, mixed with English technical vocabulary and code-switching) across four anonymized target categories.
 
 Through a structured, five-stage engineering methodology spanning rigorous exploratory data analysis, phonetic normalization, multi-scale n-gram feature extraction, pretrained multilingual and domain-specific Transformer fine-tuning, Platt scaling probability calibration, and 25-fold repeated nested cross-validation ensembling, our models achieved:
-1. **0.73041 Macro F1 on the Kaggle Public Leaderboard** — our officially submitted competition champion `submission_tri_ensemble_svm_xlm_muril_0.7269.csv` holding the **#1 peak Public Leaderboard score** and **0.73799 on the Private Leaderboard**.
-2. **0.73978 Macro F1 on the Kaggle Private Leaderboard** — our second officially selected submission `submission_quad_ensemble_svm_xlm_muril_mdeb_0.7283.csv` (0.72911 Public LB).
-3. **0.74493 Macro F1 on the Kaggle Private Leaderboard** — achieved by our exploratory Tri-Ensemble incorporating BanglishBERT (`submission_tri_ensemble_svm_bbert_xlm_0.7299.csv`).
-4. Continuous, monotonic progress from the initial **0.69888 / 0.71068** baseline up to **0.74493**, representing a **+0.0460 Macro F1 gain** on the Private Leaderboard.
+1. **0.73978 Macro F1 on the Kaggle Private Leaderboard** — our winning competition submission `submission_quad_ensemble_svm_xlm_muril_mdeb_0.7283.csv` delivering the highest submitted final score.
+2. **0.73041 Macro F1 on the Kaggle Public Leaderboard** — holding the **#1 peak Public Leaderboard score** with our Tri-Ensemble (`submission_tri_ensemble_svm_xlm_muril_0.7269.csv`).
+3. Continuous, monotonic progress from the initial **0.69888 / 0.71068** baseline up to **0.73978**, representing a **+0.0409 Macro F1 gain** on the Private Leaderboard.
 
 ---
 
